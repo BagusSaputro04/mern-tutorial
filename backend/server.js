@@ -15,5 +15,6 @@ app.get('/api/goals',(req,res)=>{
     res.status(200).json({message: 'Get Goals'})
 })
 app.use('/api/goals',require('./routes/goalRoutes.js'))
+app.use('/api/users',require('./routes/userRoutes.js'))
 app.use(errorHandler)
 app.listen(port, () => console.log(`Server started on port ${port}`))
